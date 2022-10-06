@@ -6,7 +6,7 @@ const tree = createWithRedux(
 )
 
 test('Navigate Back To Products Screen From Cart', () => {
-  const button = tree.root.findByProps({ testID: 'navigateToCart'}).props;
+  const button = tree.root.findByProps({ testID: 'navigateToCart'}).props
   button.onPress()
   expect(mockedNavigate).toBeCalledWith('Products')
 })

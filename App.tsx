@@ -14,8 +14,8 @@ const App = () => {
     <Provider store={store}>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Products">
-          <Stack.Screen name="Products" component={Products}/>
-          <Stack.Screen name="Cart" component={Cart}/>
+          <Stack.Screen name="Products" component={Products} options={{headerShown: false}} />
+          <Stack.Screen name="Cart" component={Cart} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

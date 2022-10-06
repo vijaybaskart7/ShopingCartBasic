@@ -1,5 +1,5 @@
 import { View, Dimensions, Text, Image, StyleSheet, Button } from 'react-native'
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native'
 import { useAppDispatch, useAppSelector } from '../../hooks/useType'
 import { addProductToCart, cartState } from '../../../redux/slices/productSlice'
 import { cartScreenProp, ItemI } from '../../../types/definedTypes'
@@ -8,7 +8,7 @@ function ProductCard(props: ItemI) {
     const { id, name, color, price, img } = props
     const cart = useAppSelector(cartState)
     const dispatch = useAppDispatch()
-    const navigation = useNavigation<cartScreenProp>();
+    const navigation = useNavigation<cartScreenProp>()
 
     function AddButtonTitle() {
         if(cart.some((item: ItemI) => item.id === id)) return 'IN CART'
@@ -39,9 +39,9 @@ function ProductCard(props: ItemI) {
     )
 }
 
-const deviceWidth = Math.round(Dimensions.get('window').width);
-const offset = 40;
-const radius = 20;
+const deviceWidth = Math.round(Dimensions.get('window').width)
+const offset = 40
+const radius = 20
 
 const styles = StyleSheet.create({
     container: {
@@ -96,6 +96,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginTop: 10
     },
-});
+})
 
 export default ProductCard
