@@ -30,8 +30,7 @@ function ProductCard(props: ItemI) {
                 </View>
                 <Button
                     onPress={() => onPressAdd()}
-                    // title={AddButtonTitle()}
-                    title='ADD TO CART'
+                    title={AddButtonTitle()}
                     disabled={cart.some((item: ItemI) => item.id === id)}
                     color={color}
                 />
