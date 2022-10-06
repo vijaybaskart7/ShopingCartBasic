@@ -20,7 +20,7 @@ function Header() {
                 <Icon name="archive" size={28} color="#900"
                     onPress={() => navigation.navigate('Cart')}
                 />
-                <Badge value={cartQty} status="error"
+                <Badge value={cartQty} status="primary"
                     containerStyle={{ position: 'absolute', top: -3, right: -15 }}
                 />
             </View>
